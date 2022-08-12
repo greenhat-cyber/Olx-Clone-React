@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import {useHistory} from 'react-router-dom'
+import {NavLink, useHistory} from 'react-router-dom'
 import './Header.css';
 import OlxLogo from '../../assets/OlxLogo';
 import Search from '../../assets/Search';
@@ -41,7 +41,7 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-          <span>{user ? `Welcome ${user.displayName}` : 'Login'}</span>
+          <span>{user ? `Welcome ${user.displayName}` : <NavLink to={'/login'} >Login</NavLink> }</span>
           <hr />
 
 

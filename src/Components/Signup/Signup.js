@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react';
-import {useHistory} from 'react-router-dom'
+import {NavLink,useHistory} from 'react-router-dom'
 import Logo from '../../olx-logo.png';
 import { FirebaseContext } from '../../store/FirebaseContext';
 import './Signup.css';
@@ -87,7 +87,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a href='www.google.com'>Login</a>
+        <NavLink to={'/login'}>Login</NavLink>
       </div>
     </div>
   );

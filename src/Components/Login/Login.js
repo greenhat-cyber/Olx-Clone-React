@@ -2,7 +2,7 @@ import React, { useState,useContext } from 'react';
 import {FirebaseContext} from '../../store/FirebaseContext'
 import Logo from '../../olx-logo.png';
 import './Login.css';
-import {useHistory} from 'react-router-dom'
+import {NavLink,useHistory} from 'react-router-dom'
 
 function Login() {
   const [email,setEmail]=useState('')
@@ -13,8 +13,6 @@ function Login() {
     e.preventDefault()
     firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
       history.push('/')
-    }).catch((error)=>{
-      alert(error.message)
     })
 
   }
@@ -50,7 +48,7 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a href='www.google.com' >Signup</a>
+        <NavLink to={'/signup'} >Signup</NavLink>
       </div>
     </div>
   );

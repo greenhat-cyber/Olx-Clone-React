@@ -41,7 +41,7 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-          <span>{user ? `Welcome ${user.displayName}` : <NavLink to={'/login'} >Login</NavLink> }</span>
+          <span>{user ? `Welcome ${user.displayName}`:<NavLink to={'/login'}>Login</NavLink> }</span>
           <hr />
 
 
